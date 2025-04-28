@@ -1,6 +1,95 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <style>
+
+      html {
+        min-height: 100%;
+      }
+
+      body{
+        min-height: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: linear-gradient(360deg, #a6ffb4, #52f1bb, #00e0cd, #00cde6, #00b6fe, #009dff, #0080ff, #055aff);
+        color:rgba(255, 255, 255, 1.0)  ;
+        font-family: 'Courier New', Courier, monospace;
+      
+      }
+    
+      a {
+        color: rgb(49, 42, 153);
+        text-decoration: none
+        }
+
+        .main-container {
+          max-width: 640px;
+          margin: auto;
+        }
+  
+        .image-row {
+          text-align: center;
+          margin-bottom: 30px
+        }
+
+        .avatar-image{
+          width: 128px;
+          height: 128px;
+          object-fit: cover;
+          border-radius: 128px;
+          box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.55);
+        }
+        .name-row {
+          font-size: 40px;
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 40px;
+          font-weight: 900;
+        }
+
+        .social-icons-row {
+          text-align: center;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-around;
+          padding-left: 80px;
+          padding-right: 80px;
+          padding-bottom: 10px;
+          font-size: 25px;
+        }
+      
+        .links-row {
+          font-size: 20px ;
+          text-align: left;
+          margin-bottom: 10px
+
+        }
+
+        .thumbnail {
+          width: 50px;
+          height: 50px;
+          border-radius: 128px;
+          object-fit: cover
+        }
+
+        .item{
+          background-color: rgba(255, 255, 255, 0.5);
+          margin-bottom: 30px;
+          display: flex;
+          align-items: center;
+          font-weight: 900;
+          border-radius: 1000px;
+          padding: 5px;
+          padding-right: 48px;
+          box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.55);
+        }
+
+        .link-text {
+          text-align: center;
+          flex-grow: 1;
+        }
+  
+      </style>
     <title>Link-in-bio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -11,6 +100,36 @@
   </head>
 
   <body>
+  <div class="main-container">
+      <div class="image-row">
+        <img class="avatar-image" src="/thumbnails/eli-headshot.png" alt="Eli Rosenthal Headshot">
+      </div>
+  
+      <div class="name-row">
+        Eli Rosenthal
+      </div>
+  
+      <div class="social-icons-row">
+        <a href="https://github.com/erose3" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+  
+        <a href="https://www.linkedin.com/in/eli-rosenthal/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+  
+        <a href="https://www.instagram.com/eli_rosenthal/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://venmo.com/u/elirosenthal" target="_blank">
+          <i class="fa-solid fa-money-bill-transfer"></i>
+        </a>
+  
+        <a href="https://beliapp.co/app/eli_rosenthal" target="_blank">
+          <i class="fa-solid fa-utensils"></i>
+        </a>
+      </div>
     <%= yield %>
   </body>
 </html>
